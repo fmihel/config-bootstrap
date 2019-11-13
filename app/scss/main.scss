@@ -1,0 +1,44 @@
+@import "custom";
+@import "~bootstrap/scss/bootstrap";
+
+#app{
+    position: absolute;
+    margin:0px;
+    padding:0px;
+    width:100%;
+    height:100%;
+    border:1px solid 0;
+    box-sizing: border-box;
+
+    display:flex;
+    flex-direction: column;
+
+
+    .container,.container-fluid{
+        //border:1px dashed color('red');
+        flex-grow:1;
+        margin-bottom:1px;
+        display:flex;
+        flex-direction:column;
+        
+        .row{
+            .col{
+                //border:1px solid green;
+            }
+            &:nth-child(2){
+                flex-grow:1;
+                overflow: auto;
+                color:lime;
+                border:1px dashed color('red');
+            }
+            &:nth-child(1),&:nth-last-child(1){
+                border:1px solid blue;
+            }
+       
+        }
+      /*
+        &:nth-child(1), &:nth-last-child(1) {
+        }
+        */
+    }
+}
